@@ -1,6 +1,7 @@
 ---
 applications:
-- name: ih_py_test
-  memory: 1GB
-  #buildpack: git://github.com/ihuston/python-conda-buildpack.git
-  command: gunicorn --bind 0.0.0.0:$VCAP_APP_PORT hello:app --access-logfile - --error-logfile -
+- name: myapp
+  memory: 128MB
+  disk_quota: 256MB
+  random-route: true
+  command: python hello.py

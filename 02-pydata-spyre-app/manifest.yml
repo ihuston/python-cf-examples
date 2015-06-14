@@ -1,0 +1,8 @@
+---
+applications:
+- name: sinewave
+  memory: 512MB
+  disk_quota: 2GB
+  random-route: true
+  command: python sine_wave.py
+  buildpack: https://github.com/ihuston/python-conda-buildpack.git

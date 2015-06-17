@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>CF based learning API</title>
+</head>
+<body>
+    <h1>Simple Cloud Foundry based machine learning API</h1>
+<p>
+Modified from code originally written by Alexander Kagoshima
+See the full version at <a href="https://github.com/alexkago/ds-cfpylearning">https://github.com/alexkago/ds-cfpylearning</a>
+</p>
+<p>
+This app demonstrates a very simple API that can be used to create model instances, feed data to them and let these models retrain periodically. Currently, it uses redis to store model instances, model state and data as well - for scalability and distributed processing of data this should be replaced by distributed data storage.
+
+
+<h2>Create a model</h2>
+
+<pre>
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "model_type": "LinearRegression", "retrain_counter": 10}' http://{{ host }}/createModel
+</pre>
+
+
+<h2>Add in some data</h2>
+
+This example shows how to send data into the model created before, s.t. the linear regression model becomes y = x. Since we set the retrain_counter to 10 previously, the model will retrain after it received the 10th data instance.
+
+<pre>
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 1, "label": 1}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 2, "label": 2}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 3, "label": 3}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 4, "label": 4}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 5, "label": 5}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 6, "label": 6}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 7, "label": 7}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 8, "label": 8}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 9, "label": 9}' http://{{ host }}/ingest
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 10, "label": 10}' http://{{ host }}/ingest
+</pre>
+
+<h2>Score a new datapoint</h2>
+Now we can score a new datapoint by using the /score endpoint:
+<pre>
+curl -i -X POST -H "Content-Type: application/json" -d '{"model_name": "model1", "input": 3.5}' http://{{ host }}/score
+</pre>
+
+<h2>Look at all created models</h2>
+
+There's a very rudimentary view on the redis set of all models that have been created:
+<a href="http://{{ host }}/models">http://{{ host }}/models</a>.
+
+<h2>Look at model details</h2>
+
+This lets you check out the status of the previously created model as well as its trained parameters:
+<a href="http://{{ host }}/models/model1">http://{{ host }}/models/model1</a>
+
+</p>
+</body>
+</html>

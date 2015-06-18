@@ -86,8 +86,7 @@ Now you can push the third app which uses Redis as its backing store.
     $ cd ../03-services-redis
     $ cf push
 
-The manifest specifies that this app should be bound to the myredis service instancet
-that you just created.
+The manifest specifies that this app should be bound to the myredis service instance that you just created.
 
 Putting it all together
 =======================

@@ -96,6 +96,9 @@ The fourth app is in the folder '04-learning-api'.
 We can put everything we've learned into practice by building our own simple
 machine learning API.
 
+    $ cd ../04-learning-api
+    $ cf push
+
 This is a simplified version of [a project](https://github.com/alexkago/ds-cfpylearning)
 by [Alex Kagoshima](http://twitter.com/akagoshima).
 

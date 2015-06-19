@@ -2,6 +2,7 @@ Python Cloud Foundry Examples
 =============================
 
 Author: [Ian Huston](http://ianhuston.net) [@ianhuston](http://twitter.com/ianhuston)
+License: See LICENSE.txt in each example code folder
 
 First presented at [PyData London 2015](http://london.pydata.org).
 
@@ -113,8 +114,3 @@ by [Alex Kagoshima](http://twitter.com/akagoshima).
 * [CF Summit Videos](https://www.youtube.com/playlist?list=PLhuMOCWn4P9g-UMN5nzDiw78zgf5rJ4gR)
 * [CF Meetups](http://cloud-foundry.meetup.com)
 * [Slides for this tutorial](https://speakerdeck.com/ihuston/pydata-london-2015-getting-started-with-cloud-foundry-for-data-science)
-
-
-License: See LICENSE.txt in each example folder
-
-Author: [Ian Huston](http://ianhuston.net) [@ianhuston](http://twitter.com/ianhuston)

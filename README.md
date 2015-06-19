@@ -1,6 +1,8 @@
 Python Cloud Foundry Examples
 =============================
 
+Author: [Ian Huston](http://ianhuston.net) [@ianhuston](http://twitter.com/ianhuston)
+
 First presented at [PyData London 2015](http://london.pydata.org).
 
 This tutorial is an introduction to deploying Python applications
@@ -17,8 +19,7 @@ instance with
 
 The slides are available [on Speakerdeck](https://speakerdeck.com/ihuston/pydata-london-2015-getting-started-with-cloud-foundry-for-data-science).
 
-Getting Started
-===============
+### Getting Started
 
 If you do not have an account on a Cloud Foundry installation you can
 register for a free trial at [Pivotal Web Services (PWS)](http://run.pivotal.io).
@@ -31,8 +32,7 @@ Target the CF installation API with `cf api`. For example for PWS:
 
     $ cf api https://api.run.pivotal.io
 
-Pushing your first app
-======================
+### Pushing your first app
 
 The first app is in the folder `01-simple-python-app`.
 Have a look at the code and then deploy using `cf push`.
@@ -47,8 +47,7 @@ You can scale your app by changing the number of instances and the available RAM
     $ cf scale myapp -i 5
     $ cf scale myapp -m 256M
 
-Pushing an app with PyData dependencies
-=======================================
+### Pushing an app with PyData dependencies
 
 The second app is in the folder `02-pydata-spyre-app`.
 This app is built using [Spyre](https://github.com/adamhajari/spyre) by Adam Hajari.
@@ -63,8 +62,7 @@ Push the app using `cf push` and visit the app URL to see a simple interactive v
     $ cd ../02-pydata-spyre-app
     $ cf push
 
-Using data services
-===================
+### Using data services
 
 The third app is in the folder '03-services-redis'.
 
@@ -88,8 +86,7 @@ Now you can push the third app which uses Redis as its backing store.
 
 The manifest specifies that this app should be bound to the myredis service instance that you just created.
 
-Putting it all together
-=======================
+### Putting it all together
 
 The fourth app is in the folder '04-learning-api'.
 
@@ -109,8 +106,7 @@ by [Alex Kagoshima](http://twitter.com/akagoshima).
     $ cf stop testredis
     $ cf stop learning-api
 
-Resources
-=========
+### Resources
 
 * [Cloud Foundry documentation](http://docs.cloudfoundry.org)
 * [Pivotal Web Services](http://run.pivotal.io)
@@ -121,4 +117,4 @@ Resources
 
 License: See LICENSE.txt in each example folder
 
-Author: Ian Huston
+Author: [Ian Huston](http://ianhuston.net) [@ianhuston](http://twitter.com/ianhuston)

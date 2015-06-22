@@ -21,6 +21,9 @@ instance with
 
 The slides are available [on Speakerdeck](https://speakerdeck.com/ihuston/pydata-london-2015-getting-started-with-cloud-foundry-for-data-science).
 
+A [shorter version of these notes](./helper-notes.md), which can be used by assistants in the tutorial
+is also provided.
+
 ### Getting Started
 
 If you do not have an account on a Cloud Foundry installation you can

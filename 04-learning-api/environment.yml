@@ -1,5 +1,8 @@
 name: cfpylearning
 dependencies:
+- libgfortran=1.0=0
+- openblas=0.2.14=1
+- system=5.8=2
 - flask=0.10.1=py27_1
 - itsdangerous=0.24=py27_0
 - jinja2=2.7.3=py27_1

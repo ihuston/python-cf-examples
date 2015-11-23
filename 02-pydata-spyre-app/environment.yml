@@ -1,5 +1,8 @@
 name: spyre
 dependencies:
+- libgfortran=1.0=0
+- openblas=0.2.14=1
+- system=5.8=2
 - freetype=2.5.2=2
 - libpng=1.6.17=0
 - matplotlib=1.4.3=np19py27_2

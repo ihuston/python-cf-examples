@@ -4,4 +4,5 @@ applications:
   memory: 128MB
   disk_quota: 256MB
   random-route: true
+  buildpack: python_buildpack
   command: python hello.py

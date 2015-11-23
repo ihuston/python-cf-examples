@@ -13,7 +13,7 @@ import json
 app = Flask(__name__)
 
 # Get port from environment variable or choose 9099 as local default
-port = int(os.getenv("VCAP_APP_PORT", 9099))
+port = int(os.getenv("PORT", 9099))
 
 # Get Redis credentials
 if 'VCAP_SERVICES' in os.environ:

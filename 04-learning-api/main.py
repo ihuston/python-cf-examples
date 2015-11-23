@@ -171,7 +171,7 @@ if __name__ == "__main__":
         PORT = 8080
         DEBUG = True
     else:                                       # running on CF
-        PORT = int(os.getenv("VCAP_APP_PORT"))
+        PORT = int(os.getenv("PORT"))
         DEBUG = False
 
     connect_db()

@@ -33,7 +33,8 @@ class SimpleSineApp(server.App):
         return fig
 
 # Need to specify port for Cloud Foundry
-port = int(os.getenv("VCAP_APP_PORT", 9098))
+port = int(os.getenv("PORT", 9099))
 
 app = SimpleSineApp()
 app.launch(port=port, host='0.0.0.0')
+

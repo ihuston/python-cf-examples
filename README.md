@@ -24,6 +24,10 @@ The slides are available [on Speakerdeck](https://speakerdeck.com/ihuston/pydata
 A [shorter version of these notes](./helper-notes.md), which can be used by assistants in the tutorial
 is also provided.
 
+*Update 23/11/2015*: These sample apps have been updated to use the [new Diego runtime](http://support.run.pivotal.io/entries/105844873-Migrating-Applications-from-DEAs-to-Diego). 
+The main difference is that app instances all run on the same port inside different containers.
+The first sample app has been changed to show the instance number rather than the port so that multiple instances can be recognised. 
+
 ### Getting Started
 
 If you do not have an account on a Cloud Foundry installation you can

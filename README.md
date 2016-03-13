@@ -19,7 +19,7 @@ instance with
 
     $ cf push
 
-The slides are available [on Speakerdeck](https://speakerdeck.com/ihuston/pydata-london-2015-getting-started-with-cloud-foundry-for-data-science).
+The slides are available [on Speakerdeck](https://speakerdeck.com/ihuston/pydata-london-2015-getting-started-with-cloud-foundry-for-data-science). There is also a [full length video](https://www.youtube.com/watch?v=lp2c05yDJko) of this tutorial from PyData London 2015.
 
 A [shorter version of these notes](./helper-notes.md), which can be used by assistants in the tutorial
 is also provided.
@@ -122,3 +122,4 @@ by [Alex Kagoshima](http://twitter.com/akagoshima).
 * [CF Summit Videos](https://www.youtube.com/playlist?list=PLhuMOCWn4P9g-UMN5nzDiw78zgf5rJ4gR)
 * [CF Meetups](http://cloud-foundry.meetup.com)
 * [Slides for this tutorial](https://speakerdeck.com/ihuston/pydata-london-2015-getting-started-with-cloud-foundry-for-data-science)
+* [Video of this tutorial](https://www.youtube.com/watch?v=lp2c05yDJko)

@@ -24,6 +24,12 @@ The slides are available [on Speakerdeck](https://speakerdeck.com/ihuston/pydata
 A [shorter version of these notes](./helper-notes.md), which can be used by assistants in the tutorial
 is also provided.
 
+### Changes:
+
+*Update 03/10/2016*: The official CF Python buildpack now includes support for the conda package manager.
+This means there is no need to use a separate community buildpack to run apps using PyData packages.
+The tutorial has been updated to reflect this.
+
 *Update 23/11/2015*: These sample apps have been updated to use the [new Diego runtime](http://support.run.pivotal.io/entries/105844873-Migrating-Applications-from-DEAs-to-Diego). 
 The main difference is that app instances all run on the same port inside different containers.
 The first sample app has been changed to show the instance number rather than the port so that multiple instances can be recognised. 
@@ -61,10 +67,11 @@ You can scale your app by changing the number of instances and the available RAM
 The second app is in the folder `02-pydata-spyre-app`.
 This app is built using [Spyre](https://github.com/adamhajari/spyre) by Adam Hajari.
 
-This application uses the [Python Conda Buildpack](https://github.com/ihuston/python-conda-buildpack)
-to provision dependencies using `conda`. This buildpack is specified in the `manifest.yml` file.
+This application uses a new feature of the official [Python buildpack](https://github.com/cloudfoundry/python-buildpack/)
+to provision dependencies using `conda`.
 
 The `environment.yml` file contains the `conda` environment specification.
+The buildpack detects this file and uses `conda` instead of `pip` to install the dependencies.
 
 Push the app using `cf push` and visit the app URL to see a simple interactive visualisation.
 

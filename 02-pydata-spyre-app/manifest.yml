@@ -5,4 +5,4 @@ applications:
   disk_quota: 2GB
   random-route: true
   command: python sine_wave.py
-  buildpack: https://github.com/ihuston/python-conda-buildpack.git
+  buildpack: python_buildpack

@@ -6,7 +6,7 @@ applications:
   domain: cfapps.io
   random-route: true
   path: .
-  buildpack: https://github.com/ihuston/python-conda-buildpack.git
+  buildpack: python_buildpack
   command: python main.py
   services:
    - myredis
